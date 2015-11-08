@@ -1,0 +1,10 @@
+---
+author: "Pete Smith"
+email: "pete@beyond-code.com"
+title: "Beyond Code"
+subtitle: "Code is just the beginning. Welcome to the rest of your journey"
+url: "http://beyond-code.com"
+
+theme:          plain
+permalink:      /:title
+markdown: rdiscount
