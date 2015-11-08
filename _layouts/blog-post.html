@@ -29,6 +29,11 @@
                             </li>
                         </ul>
                     </div>
+                    {% if page.preview_image %}
+                    <div class="blog-img">
+                        <img class="img-responsive" src="{{ "assets/img/preview/" | prepend: site.baseurl | append: page.preview_image }}" alt="">
+                    </div>
+                    {% endif %}
                     
                     {{ content }}
 

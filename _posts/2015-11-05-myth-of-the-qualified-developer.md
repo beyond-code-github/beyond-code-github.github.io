@@ -1,6 +1,7 @@
 ---
 layout: blog-post
-title:  Video - The Myth of the Qualified Develoepr
+title:  Video - The Myth of the Qualified Developer
+preview_image: myth-of-the-qualified-developer.png
 
 tags:
 - video
@@ -8,15 +9,10 @@ tags:
 - developers
 ---
 
-<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna.</p>
+The video for "The Myth of the Qualified Developer" recorded for the London .net metup at Skills Matter is now available online. [Watch it in full here](https://skillsmatter.com/skillscasts/6820-pete-smith-the-myth-of-the-qualified-developer)
 <!--more-->
-<div class="tag-box tag-box-v2">
-    <p>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet consectetur adipiscing elit. Fusce condimentum eleifend enim a feugiatt non libero consectetur adipiscing elit magna. Sed et quam lacus. Condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat.</p>
-</div>
-<p>Officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend.</p>
-<p>Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum</p><br>
-<blockquote>
-    <p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why.</p>
-    <small>CEO Jack Bour</small>
-</blockquote>
-<p>Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus.</p>
+#### About this talk
+
+There's a lot to master in any job, but software engineering takes this to a whole new level. A good developer has to enjoy learning, and of course we usually do this by making mistakes. But what level of knowledge divides a master from a mere competent beginner? How do we know when we've learned enough to do our job properly and consider ourselves fully qualified? 
+
+In this talk I'll help you to answer these questions by sharing the stories of my own greatest mistakes, and reveal how a lot of them ended up becoming my greatest opportunities. We'll explore what it means to fail (sometimes specatacularly) and most importantly, how to make the most of it. And remember - whether you think you know too much, or too little - you're wrong!
