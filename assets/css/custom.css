@@ -4,8 +4,12 @@
 	padding: 0;
 }
 
-.header .container {
+.header > .container {
 	margin-bottom: 0;
+}
+
+.wrapper > .container {
+	padding-top: 30px;
 }
 
 .posts .dl-horizontal dd {
