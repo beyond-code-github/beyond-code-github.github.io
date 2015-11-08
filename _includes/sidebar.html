@@ -22,21 +22,13 @@
     <!-- Posts -->
     <div class="posts margin-bottom-40">
         <div class="headline headline-md"><h2>Recent Posts</h2></div>
+        {% for post in site.posts limit:5 %}
         <dl class="dl-horizontal">
             <dd>
-                <p><a href="#">Responsive Bootstrap 3 Template placerat idelo alac eratamet.</a></p>
+                <p><a href="{{ post.url }}">{{ post.title }}</a></p>
             </dd>
         </dl>
-        <dl class="dl-horizontal">
-            <dd>
-                <p><a href="#">100+ Amazing Features Layer Slider, Layer Slider, Icons, 60+ Pages etc.</a></p>
-            </dd>
-        </dl>
-        <dl class="dl-horizontal">
-            <dd>
-                <p><a href="#">Developer Friendly Code imperdiet condime ntumi mperdiet condim.</a></p>
-            </dd>
-        </dl>
+        {% endfor %}
     </div><!--/posts-->
     <!-- End Posts -->
 
