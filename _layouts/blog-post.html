@@ -1,0 +1,66 @@
+<html>
+{% include head.html %}
+
+<body>
+<div class="wrapper">
+    
+    {% include header.html %}
+
+    <!--=== Content Part ===-->
+    <div class="container content">
+    	<div class="row blog-page blog-item">
+            <!-- Left Sidebar -->
+        	<div class="col-md-9 md-margin-bottom-60">
+                <!--Blog Post-->
+                <div class="blog margin-bottom-40">
+                    <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                    <div class="blog-post-tags">
+                        <ul class="list-unstyled list-inline blog-info">
+                            <li><i class="fa fa-calendar"></i> {{ page.date | date: '%B %d, %Y' }}</li>
+                            <li><i class="fa fa-pencil"></i> Pete Smith</li>
+                            <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
+                        </ul>
+                        <ul class="list-unstyled list-inline blog-tags">
+                            <li>
+                                <i class="fa fa-tags"></i>
+                                    {% for tag in page.tags %}
+                                    <a href="#">{{ tag }}</a>
+                                    {% endfor %}
+                            </li>
+                        </ul>
+                    </div>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna.</p><br>
+                    <div class="tag-box tag-box-v2">
+                        <p>Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet consectetur adipiscing elit. Fusce condimentum eleifend enim a feugiatt non libero consectetur adipiscing elit magna. Sed et quam lacus. Condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat.</p>
+                    </div>
+                    <p>Officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend.</p>
+                    <p>Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum</p><br>
+                    <blockquote>
+                        <p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why.</p>
+                        <small>CEO Jack Bour</small>
+                    </blockquote>
+                    <p>Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, mollitia animi, id est laborum et dolorum fug consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus.</p>
+                </div>
+                <!--End Blog Post-->
+
+    			<hr>
+
+                {% include comments.html %}
+
+            </div>
+            <!-- End Left Sidebar -->
+
+            {% include sidebar.html %}
+            
+        </div><!--/row-->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+    
+    {% include footer.html %}
+
+</div><!--/wrapper-->
+
+{% include scripts.html %}
+
+</body>
+</html>
