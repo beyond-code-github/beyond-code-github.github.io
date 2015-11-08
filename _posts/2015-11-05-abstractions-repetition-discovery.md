@@ -9,8 +9,6 @@ tags:
 - code
 ---
 
-#### Introduction
-
 Hands up if you've been in this situation; you are building out a handful of new features that happen to share certain facets. To the customer they are distinct deliverables, but to you and your team it's a rinse and repeat type scenario with maybe one or two tweaks in each case.
 
 The first one is straightforward - you add a view, a controller and so on. The second feature is much the same, view... controller... perhaps you spot some code or markup that can be pulled out into a dependency and re-used between the two.
@@ -18,7 +16,7 @@ The first one is straightforward - you add a view, a controller and so on. The s
 Then we come to the third feature. You sit back and think to yourself - "these are really all variations on the same theme. I could introduce an abstraction to simplify this. Adding the remaining features afterwards will be really quick, and really simple."
 
 Stop right there. Chances are you're about to make a grave error, and I'm going to explain why.
-
+<!--more-->
 #### Don't repeat yourself
 
 I'm going to bring this to life with a quick example. The fictional project we're working on is for a school. They need to manage all sorts of lists of things which we are going to build from scratch. The backlog looks like this:
@@ -31,17 +29,17 @@ Edited for brevity, but you get the idea - we need to implement some lists. We'r
 
 First time around, we end up with some markup looking something like this:
 
-https://gist.github.com/roysvork/43df3b474234162f501c
+<script src="https://gist.github.com/beyond-code-github/43df3b474234162f501c.js"></script>
 
 The next story gets implemented, and looks very similar:
 
-https://gist.github.com/roysvork/367b446a51d83f19d136
+<script src="https://gist.github.com/beyond-code-github/367b446a51d83f19d136.js"></script>
 
 Now the pair who picks up the third story takes a look at the implementation so far and identifies quite rightly that we've got some code re-use that needs attention. Both teachers, students, and the new classes list are all going to have a name and a notes field, as well as the configuration for the datatable and the boilerplate for the form.
 
 In the spirit of making that smallest possible change that brings value, our pair introduces an abstraction that will eliminate the code repetition and also improve their ability to build any future lists at the same time.
 
-https://gist.github.com/roysvork/a663d86e6eb72cef7819
+<script src="https://gist.github.com/beyond-code-github/a663d86e6eb72cef7819.js"></script>
 
 No more re-use... all we need to do is ensure we render this view for each list. Nice, right?
 
@@ -73,7 +71,7 @@ What a lot of people don't realise about DRY is that it's intended to mitigate t
 
 However much we refactor intent, it never goes away. It just ends up getting moved to less accessible place. In our case, it ends up in the controller or the model:
 
-https://gist.github.com/roysvork/c3f88f173994e0623dcd
+<script src="https://gist.github.com/beyond-code-github/c3f88f173994e0623dcd.js"></script>
 
 #### The leaky abstraction
 
@@ -82,12 +80,12 @@ You may be quite surprised by the amount of problems we've introduced already wi
 * SCH-021 - As a teacher, I want to be able to upload a list of students provided to me by the school administrator.
 Now we need to add a feature to one of our lists but not the others - our use cases have diverged. So once again we make the simplest changes to satisfy our acceptance criteria:
 
-https://gist.github.com/roysvork/ba00446b167453097d2d
+<script src="https://gist.github.com/beyond-code-github/ba00446b167453097d2d.js"></script>
 
 Spot the problem here? We've introduced a leaky abstraction. By virtue of our code re-use, a concern that would otherwise have been specific to one feature has now leaked into code used by another. This in turn increases the chance that we're going to introduce bugs into unrelated parts of our codebase.
 
 You might be thinking "this doesn't seem so bad, there's only one conditional and it's still better than it was before with the duplication". But the danger is after a few more stories we end up with configuration that looks like this:
 
-https://gist.github.com/roysvork/1154b2264a0e5e2a4a95
+<script src="https://gist.github.com/beyond-code-github/1154b2264a0e5e2a4a95.js"></script>
 
 This kind of approach can get away from you very quickly; it's ugly, the configuration is seperate and far away from the view that it relates to, we've introduced yet another level of indirection. To top it all off, all it really does is save us keystrokes writing the next list which as we've discussed is not a common occurance across the life of the project.
