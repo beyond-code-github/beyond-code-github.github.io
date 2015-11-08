@@ -11,7 +11,7 @@ title:  Blog
         <ul class="list-unstyled list-inline blog-info">
             <li><i class="fa fa-calendar"></i> {{ post.date | date: '%B %d, %Y' }}</li>
             <li><i class="fa fa-pencil"></i> Pete Smith</li>
-            <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
+            <li><i class="fa fa-comments"></i> <a href="{{ post.url }}/#disqus_thread">0 Comments</a></li>
         </ul>
         <ul class="list-unstyled list-inline blog-tags">
             <li>
