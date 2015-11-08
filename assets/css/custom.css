@@ -1,4 +1,8 @@
 /* Add here all your css styles (customizations) */
+body {
+	font-size: 11pt;
+}
+
 .breadcrumbs
 {
 	padding: 0;
