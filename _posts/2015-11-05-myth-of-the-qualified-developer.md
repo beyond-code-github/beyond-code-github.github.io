@@ -9,7 +9,9 @@ tags:
 - developers
 ---
 
-The video for "The Myth of the Qualified Developer" recorded for the London .net metup at Skills Matter is now available online. [Watch it in full here](https://skillsmatter.com/skillscasts/6820-pete-smith-the-myth-of-the-qualified-developer)
+The video for "The Myth of the Qualified Developer" recorded for the London .net metup at Skills Matter is now available online.
+
+[Watch it in full here](https://skillsmatter.com/skillscasts/6820-pete-smith-the-myth-of-the-qualified-developer)
 <!--more-->
 #### About this talk
 
