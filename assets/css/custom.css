@@ -25,6 +25,11 @@ h4 {
 	padding-top: 30px;
 }
 
+.attributed-image {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
 .posts .dl-horizontal dd {
     margin-left: 0px;
 }
