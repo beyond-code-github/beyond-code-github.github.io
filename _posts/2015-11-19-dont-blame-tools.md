@@ -37,7 +37,7 @@ The fact that society already has a proverb to this effect should be our first c
 
 The interesting thing about a team though is what happens when you take away the people - you can't. The people _are_ the team. You need people to wield the tools and ultimately we have another proverb for this situation: to err is human. It's not tools but PEOPLE that are the problem, and I use case here merely for emphasis.
 
-<div class="attributed-image responsive-image"><img class="center-block" src="{{ "assets/img/dont-blame-tools/best practices.gif" | prepend: site.baseurl }}" alt="best practices" />
+<div class="attributed-image"><img class="center-block img-responsive" src="{{ "assets/img/dont-blame-tools/best practices.gif" | prepend: site.baseurl }}" alt="best practices" />
 <small class="pull-right"><a href="http://dilbert.com/strip/2013-12-31">http://dilbert.com/strip/2013-12-31</a></small></div>
 
 There is one particular group of people who are much maligned in this space - the consultants. These are the people who get paid to give advice on a particular topic, despite being somewhat detached from the experiences of their customers. They are the coaches that supposedly make money from a given methodology by offering their opinions passed off as fact. For these reasons it's easy to arrive at the conclusion that the consultants are to blame for our failures, although given what we know about human nature it's inherently plausible.

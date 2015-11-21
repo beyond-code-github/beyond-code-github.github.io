@@ -57,13 +57,13 @@ Code is by definition write once, maintain many, and so it stands to reason that
 
 But wait, there's more. By focusing so much on DRY we've lost a key feature of our code - discoverability. If I'm new to a codebase or a feature and tasked with maintaining the code, the first thing I do is this:
 
-<img class="center-block" src="{{ "assets/img/abstractions-repetition-discovery/ctrl-shift-t.png" | prepend: site.baseurl }}" alt="ctrl-shift-t" />
+<img class="center-block img-responsive" src="{{ "assets/img/abstractions-repetition-discovery/ctrl-shift-t.png" | prepend: site.baseurl }}" alt="ctrl-shift-t" />
 
 The html/cshtml page is usually the entry point to a feature, so once we've found that the rest of the code is easy to trace.
 
 Post refactoring though, all that happens is this:
 
-<img class="center-block" src="{{ "assets/img/abstractions-repetition-discovery/ctrl-shift-fail.png" | prepend: site.baseurl }}" alt="ctrl-shift-fail" />
+<img class="center-block img-responsive" src="{{ "assets/img/abstractions-repetition-discovery/ctrl-shift-fail.png" | prepend: site.baseurl }}" alt="ctrl-shift-fail" />
 
 What's happened is that instead of being easily able to find the entry point to our students list, we have to know ahead of time that this feature is driven by the ListController/html file. We've removed some explicit knowledge from the codebase and made it implicit. Developers (and other stakeholders) now either need to be provided with this information from a colleague, or they need to take the time to discover it for themselves.
 
