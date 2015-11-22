@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title:  The Pit of Fail - Abstractions, Repetition and Discovery
+title:  On Abstractions, Repetition and Discovery
 
 tags:
 - pit-of-fail
@@ -25,7 +25,7 @@ I'm going to bring this to life with a quick example. The fictional project we'r
 * SCH-002 - As a teacher, I want to be able to maintain a list of students in my class
 * SCH-003 - As the head teacher, I want to be able to maintain a list of classes we teach
 
-Edited for brevity, but you get the idea - we need to implement some lists. We're working on this as a team so it won't neccesarily be the same pair picking up each story.
+Edited for brevity, but you get the idea - we need to implement some lists. We're working on this as a team so it won't necessarily be the same pair picking up each story.
 
 First time around, we end up with some markup looking something like this:
 
@@ -51,7 +51,7 @@ This is a good example of when we should apply the You Aint Gonna Need It philos
 
 It doesn't really matter how many list-based stories are on the backlog, neither does it matter how many lists we may end up having to write in the coming weeks. The fact is, the time spent writing the lists is always going to pale in insignificance compared to the amount of time we spend maintaining that code over the coming months and years.
 
-Code is by definition write once, maintain many, and so it stands to reason that time spent increasing code quality and maintainability will almost always be more valuable than time spent reducing future keystrokes. As a rule of thumb, you should never implement an abstraction purely to save you time coding future features. That's not to say you shouldn't aim to improve you methods, but you should make sure to balance it with other concerns.
+Code is by definition write once, maintain many, and so it stands to reason that time spent increasing code quality and maintainability will almost always be more valuable than time spent reducing future keystrokes. As a rule of thumb, you should never implement an abstraction purely to save you time coding future features. That's not to say you shouldn't aim to improve your methods, but you should make sure to balance it with other concerns.
 
 #### Logic vs Intent
 
@@ -78,6 +78,7 @@ However much we refactor intent, it never goes away. It just ends up getting mov
 You may be quite surprised by the amount of problems we've introduced already with such a bog-standard, everyday refactoring. But there are still more beasties lurking in the depths. Lets fast forward a few sprints in our example where we pick up the following card:
 
 * SCH-021 - As a teacher, I want to be able to upload a list of students provided to me by the school administrator.
+
 Now we need to add a feature to one of our lists but not the others - our use cases have diverged. So once again we make the simplest changes to satisfy our acceptance criteria:
 
 <script src="https://gist.github.com/beyond-code-github/ba00446b167453097d2d.js"></script>
@@ -88,4 +89,22 @@ You might be thinking "this doesn't seem so bad, there's only one conditional an
 
 <script src="https://gist.github.com/beyond-code-github/1154b2264a0e5e2a4a95.js"></script>
 
-This kind of approach can get away from you very quickly; it's ugly, the configuration is seperate and far away from the view that it relates to, we've introduced yet another level of indirection. To top it all off, all it really does is save us keystrokes writing the next list which as we've discussed is not a common occurance across the life of the project.
+This kind of approach can get away from you very quickly; it's ugly, the configuration is separate and far away from the view that it relates to, we've introduced yet another level of indirection. To top it all off, all it really does is save us keystrokes writing the next list which as we've discussed is not a common occurrence across the life of the project.
+
+#### Enter components
+
+Wouldn't it be great if we could express our intent directly in the code or markup, without the need for all this configuration? This is where _componetisation_ comes in. There are many ways of building view components, we could use partial views server side, use javascript to read data from custom attributes or even try out the new webcomponents standard. In code it's just a case of applying the correct abstraction. In both cases the key aim is encapsulate logic but preserve intent.
+
+Using webcomponents custom tags, we can rewrite our teachers html in a much cleaner way:
+
+<script src="https://gist.github.com/beyond-code-github/3a7158efdcf89b6476ef.js"></script>
+
+We've abstracted away the common concerns such as the data table and the field configuration but it's still clear what this view represents. Inside our tablelist component we can re-use the column configuration to ensure that both the table and the 'add new' dialog contain the right things but in a way that's easy to change. By using specific views for teachers and students we get our discoverability back, and if the column definitions diverge in future then we simply update the markup for the relevant page. Likewise the bulk upload is now governed by the presence or lack of a component.
+
+If we play a story where we have to add a column to all lists we may have to update multiple views but it's really not that onerous. Remember, the purpose of abstraction should not be to reduce keystrokes when writing future features, but to increase maintainability; there's no need for separate configuration any more because now the markup _is_ the configuration. As a result, the code is much easier to understand and reason about.
+
+#### Summary
+
+In this post we discussed the merits of making the smallest possible change that brings value, but also saw that this approach can sometimes get us into trouble if applied too rigidly. We talked about how a codebase is "write-once, read many" and that favouring maintainability and discoverability is almost always more valuable than just reducing lines of code/keystrokes. We demonstrated that during refactoring we should focus on reducing repetition of logic rather than repetition of intent, taking care to avoid leaky abstractions.
+
+When it comes to feature boundaries it's much more likely that things will diverge over time rather than stay the same, and it's also considerably more costly to have to undo a poor abstraction later down the line than it is to maintain intent in multiple places. Just because two features share some properties does not mean that they have the same reasons for change. By favouring composability over branching driven by configuration we can preserve intent and discoverability and reduce complexity in our application.
