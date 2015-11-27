@@ -3,9 +3,11 @@ layout: blog-post
 title:  Don't Blame the Tools
 
 tags:
-- video
-- talk
-- developers
+- tools
+- agile
+- blame
+- people
+- failure
 ---
 
 I'd like to introduce three very imaginatively named and fictional projects:
