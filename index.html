@@ -22,11 +22,18 @@ title:  Blog
             </li>
         </ul>        
     </div>
-    {% if post.preview_image %}
-    <div class="blog-img">
-        <img class="img-responsive" src="{{ "assets/img/preview/" | prepend: site.baseurl | append: post.preview_image }}" alt="">
-    </div>
+    {% if post.preview_link %}
+    <a href="{{ post.preview_link }}">
     {% endif %}
+        {% if post.preview_image %}
+        <div class="blog-img">
+            <img class="img-responsive" src="{{ "assets/img/preview/" | prepend: site.baseurl | append: post.preview_image }}" alt="">
+        </div>
+        {% endif %}
+    {% if post.preview_link %}
+    </a>
+    {% endif %}
+    
     {{ post.excerpt }}
     <p><a class="btn-u btn-u-small" href="{{ post.url }}"><i class="fa fa-plus-sign"></i> Read More</a></p>
 </div>
