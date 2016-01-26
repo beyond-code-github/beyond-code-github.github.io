@@ -30,13 +30,16 @@
                         </ul>
                     </div>
                     {% if page.preview_image %}
-                    <div class="blog-img">
+                    <div class="blog-img attributed-image">
                         {% if page.preview_link %}
                         <a href="{{ page.preview_link }}">
                         {% endif %}
                             <img class="img-responsive" src="{{ "assets/img/preview/" | prepend: site.baseurl | append: page.preview_image }}" alt="">
                         {% if page.preview_link %}
                         </a>
+                        {% endif %}
+                        {% if page.preview_attribution %}
+                        <small class="pull-right"><a href="{{ page.preview_attribution }}">{{ page.preview_attribution }}</a></small>
                         {% endif %}
                     </div>
                     {% endif %}

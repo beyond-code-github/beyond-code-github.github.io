@@ -26,8 +26,11 @@ title:  Blog
     <a href="{{ post.preview_link }}">
     {% endif %}
         {% if post.preview_image %}
-        <div class="blog-img">
+        <div class="blog-img attributed-image">
             <img class="img-responsive" src="{{ "assets/img/preview/" | prepend: site.baseurl | append: post.preview_image }}" alt="">
+            {% if post.preview_attribution %}
+            <small class="pull-right"><a href="{{ post.preview_attribution }}">{{ post.preview_attribution }}</a></small>
+            {% endif %}
         </div>
         {% endif %}
     {% if post.preview_link %}
