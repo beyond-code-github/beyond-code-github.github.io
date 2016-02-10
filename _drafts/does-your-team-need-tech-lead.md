@@ -44,4 +44,11 @@ The Federated Tech Lead approach has many benefits:
 * The reward and satisfaction of increased responsibility can be shared throughout the team.
 
 <state the downsides>
-It should come as no surprise that empowering individuals leads to a more productive and functioning team. However there are still trade-offs to be made.
+It should come as no surprise that empowering individuals leads to a more productive and functioning team. However there are still trade-offs to be made. What works well for one team doesn't automatically work well for another, and any suggestions about structuring teams should be adapted to your own particular scenario. Flat structures work well for some teams while others require a strong sense of leadership and authority. If your team falls into the latter group you need to ensure this direction is still present if you decide to federate your Tech Lead.
+
+<summary>
+This isn't a new approach, but it's one I've found to be useful. By dividing up the responsibilities that usually fall to one individual we can solve many of the problems caused by the traditional Tech Lead structure, particularly with regards to finding the right skills. It can also promote a flat structure and a democratic environment, but most importantly it helps build that vital level of trust required for a successful team.
+
+Pete
+
+Have you adopted a similar approach or been thinking about doing so? Post your experiences in the comments, I'd love to hear them.
